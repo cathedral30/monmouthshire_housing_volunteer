@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body>
+    <div th:fragment="content">
+    <h4 class="card-title" id="title">Register a new reward</h4>
+    <form action="/admin/rewards/create" method="get" class="forms-sample">
+        <div class="form-group">
+            <label >Reward Name</label>
+            <input type="text" name="name" id="name" placeholder="Enter Reward Name" class="form-control">
+        </div>
+        <div class="form-group">
+            <label >Reward description</label>
+            <input type="text" name="description" id="description" placeholder="Enter Description"  class="form-control">
+        </div>
+        <div class="form-group">
+            <label >Reward Cost</label>
+            <input type="text" name="cost" id="cost" placeholder="Enter Cost" class="form-control">
+        </div>
+        <div class="form-group">
+            <label > Business Name</label>
+            <select class="form-control" name="business">
+                <option th:each="business : ${businesses}" th:value="${business.Bname}" th:text="${business.Bname}"></option>
+            </select>
+        </div>
+
+        <input type="submit" class="btn btn-success mr-2" name="Create Reward" id="submit">
+    </form>
+    </div>
+
+<script src="/vendors/js/vendor.bundle.base.js"></script>
+<script src="/vendors/js/vendor.bundle.addons.js"></script>
+<script src="/js/off-canvas.js"></script>
+<script src="/js/misc.js"></script>
+</body>
+</html>

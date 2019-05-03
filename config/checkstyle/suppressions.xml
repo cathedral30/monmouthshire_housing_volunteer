@@ -1,0 +1,3 @@
+<module name="TreeWalker">
+    <property name="fileExtensions" value="java"/>
+</module>

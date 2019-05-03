@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<div th:fragment="content">
+    <form action="/admin/deletebusiness/deletingbusiness" method="get" class="forms-sample">
+        <div class="form-group">
+            <label id="title">Business Name</label>
+            <select class="form-control" name="business">
+                <option th:each="business : ${businesses}" th:value="${business.Bname}" th:text="${business.Bname}"></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label >Type "delete" to confirm you want to delete this business</label>
+            <input type="text" name="delete"  placeholder="type 'delete' here"  class="form-control">
+        </div>
+
+        <input type="submit" class="btn btn-success mr-2" name="d" id="submit">
+    </form>
+</div>
+</body>
+</html>
