@@ -15,7 +15,7 @@ public class UserRoleRepositoryJdbc implements UserRoleRepository {
     private JdbcTemplate jdbcTemplate;
     private RowMapper<UserRole> userRoleMapper;
 
-    @Value("select a.role from user_role a, User b where b.username=? and a.userid=b.id")
+    @Value("select a.role from user_role a, user b where b.username=? and a.userid=b.id")
     String findRoleByUsername;
 
     @Value("${sql.create.user.role}")
