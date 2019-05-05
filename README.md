@@ -3,7 +3,8 @@
 ## Setup
 
 * To generate a local copy of the Database Schemas, run [creation.sql](sql/creation.sql) in the sql folder.
-* In the [application.properties](src/main/resources/application.properties) file, set the local MySQL sever login details (currently set to username=root, password=comsc).
+* Then run [account_creation.sql](sql/account_creation.sql) in the sql folder to create the MHA database account.
+* The application properties file assumes the database is running locally on port 3306, the file will need to altered if this is not the case.
 * Run gradle build.
 
 ## User Tests
