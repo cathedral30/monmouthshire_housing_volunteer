@@ -35,15 +35,15 @@
                         <button type="submit" id="submitDecline"  class="btn btn-danger submit-btn btn-block">Decline</button>
                     </form>
                 </td>
-                <td th:utext="${a.volunteerapplicantid}"></td>
-                <td th:utext="${a.firstName + ' ' + a.lastName}"></td>
-                <td th:utext="${a.username}"></td>
-                <td th:utext="${a.address_line_one + a.address_line_two + ', ' + a.city + ', ' + a.postcode}"></td>
-                <td th:utext="${a.mha_tennant}"></td>
-                <td th:utext="${a.previous_volunteer}"></td>
-                <td th:utext="${a.conditions + ', ' + a.condition_details}"></td>
-                <td th:utext="${a.medication + ', ' + a.medication_details}"></td>
-                <td th:utext="${a.allergies + ', ' + a.allergy_details}"></td>
+                <td th:text="${a.volunteerapplicantid}"></td>
+                <td th:text="${a.firstName + ' ' + a.lastName}"></td>
+                <td th:text="${a.username}"></td>
+                <td th:text="${a.address_line_one + a.address_line_two + ', ' + a.city + ', ' + a.postcode}"></td>
+                <td th:text="${a.mha_tennant}"></td>
+                <td th:text="${a.previous_volunteer}"></td>
+                <td th:text="${a.conditions + ', ' + a.condition_details}"></td>
+                <td th:text="${a.medication + ', ' + a.medication_details}"></td>
+                <td th:text="${a.allergies + ', ' + a.allergy_details}"></td>
             </tr>
             </tbody>
         </table>
