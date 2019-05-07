@@ -170,6 +170,11 @@ CREATE TABLE `volunteer_application` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
 
+CREATE TABLE `api_keys` (
+	`user_reference` varchar(255),
+    `key` varchar(255) NOT NULL
+);
+
 DROP PROCEDURE IF EXISTS `createSystemAdministrator`;
 
 DELIMITER $$
@@ -341,7 +346,10 @@ INSERT INTO business (business_name, email_address) values ('Cracking Cupcake Co
 INSERT INTO reward (reward_name, reward_description, cost, business_id, num_times_redeemed, creator, active) values ('Free Cupcake', 'You get a free cupcake!', 3, 1, 0, 'admin@test.com', 1);
 INSERT INTO reward (reward_name, reward_description, cost, business_id, num_times_redeemed, creator, active) values ('Free Mug of Shale Oil', 'Have a free mug of our finest Shale Oil to wash down the cupcakes!', 8, 1, 0, 'admin@test.com', 1);
 
+INSERT INTO api_keys values ('A key for testing access', 'AIzaSyClzfrOzB818x55FASHvX4JuGQciR9lv7q');
+
 CALL registerUser('volunteer@mha.com', '$2a$10$f7XUPOWAfkFyiucChl2KnOqyLxL1g3KGij6EukR0t4FoUDvwz3ZSG', 'Ben', 'Morris', '07935964692', '', 1, 0, '', 0, '', 0, '', 0, '', '8 Stratford Rd', '', 'Salisbury', 'SP1 3JH');
+
 
 
 
