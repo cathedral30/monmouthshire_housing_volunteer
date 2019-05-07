@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import java.util.Date;
 
 @Controller
-@RequestMapping("/applicant")
+@RequestMapping("/admin/applicant")
 public class ApplicantController {
 
     static final Logger LOG = LoggerFactory.getLogger(ApplicantController.class);
