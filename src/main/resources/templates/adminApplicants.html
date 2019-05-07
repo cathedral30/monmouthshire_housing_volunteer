@@ -24,14 +24,12 @@
             <tbody>
             <tr th:each="a : ${apps}">
                 <td>
-                    <!--Referencing: https://stackoverflow.com/questions/38776883/implement-a-button-in-a-table-that-returns-data-from-the-table-using-thymeleaf-a-->
-                    <form th:action="@{/applicant/accept/{id}(id=${a.volunteerapplicantid})}" th:method="get">
+                    <form th:action="@{/admin/applicant/accept/{id}(id=${a.volunteerapplicantid})}" th:method="get">
                         <button type="submit" id="submitAccept" class="btn btn-primary submit-btn btn-block">Accept</button>
-                        <!--https://www.thymeleaf.org/doc/articles/standardurlsyntax.html-->
                     </form>
                 </td>
                 <td>
-                    <form th:action="@{/applicant/decline/{id}(id=${a.volunteerapplicantid})}" th:method="get">
+                    <form th:action="@{/admin/applicant/decline/{id}(id=${a.volunteerapplicantid})}" th:method="get">
                         <button type="submit" id="submitDecline"  class="btn btn-danger submit-btn btn-block">Decline</button>
                     </form>
                 </td>
