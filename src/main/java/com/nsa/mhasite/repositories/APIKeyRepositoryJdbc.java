@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public class APIKeyRepositoryJdbc implements APIKeyRepository{
+public class APIKeyRepositoryJdbc implements APIKeyRepository {
 
     private JdbcTemplate jdbcTemplate;
     private RowMapper<APIKey> apiMapper;
@@ -17,7 +17,7 @@ public class APIKeyRepositoryJdbc implements APIKeyRepository{
     @Value("select * from api_keys;")
     String findAll;
 
-    public APIKeyRepositoryJdbc(JdbcTemplate aTemplate){
+    public APIKeyRepositoryJdbc(JdbcTemplate aTemplate) {
         jdbcTemplate = aTemplate;
 
         apiMapper = (rs, i) -> new APIKey(

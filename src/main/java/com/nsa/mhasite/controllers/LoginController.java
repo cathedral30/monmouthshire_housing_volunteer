@@ -9,7 +9,7 @@ import org.springframework.web.servlet.view.RedirectView;
 public class LoginController {
 
     @RequestMapping(path = "login", method = RequestMethod.GET)
-    public RedirectView returnHome(){
+    public RedirectView returnHome() {
         return new RedirectView("");
     }
 }

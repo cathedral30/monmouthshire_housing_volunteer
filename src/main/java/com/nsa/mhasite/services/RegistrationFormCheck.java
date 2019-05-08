@@ -5,7 +5,6 @@ import com.nsa.mhasite.domain.User;
 import com.nsa.mhasite.repositories.UserRepository;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 
