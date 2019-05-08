@@ -175,6 +175,13 @@ CREATE TABLE `api_keys` (
     `key` varchar(255) NOT NULL
 );
 
+CREATE TABLE `locked_users` (
+	`username` varchar(255) NOT NULL,
+    `attempts` int,
+    `locked` int(1),
+    `locked_until` datetime
+);
+
 DROP PROCEDURE IF EXISTS `createSystemAdministrator`;
 
 DELIMITER $$
