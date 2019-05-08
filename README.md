@@ -5,9 +5,10 @@
 * To generate a local copy of the Database Schemas, run [creation.sql](sql/creation.sql) in the sql folder.
 * Then run [account_creation.sql](sql/account_creation.sql) in the sql folder to create the MHA database account.
 * The application properties file assumes the database is running locally on port 3306, the file will need to altered if this is not the case.
-* Run gradle build.
+* Run gradlew build then the built Jar.
+* Alternatively run gradlew bootrun.
 
-## User Tests
+## User Tests (Old)
 ### Registration
 * Navigate to the website [home](http://localhost:8081/) and click on ["create new account"](http://localhost:8081/application).
 * Fill in your details, you will be informed if you have missed any required boxes, a functional email address is important for testing automated emails.
