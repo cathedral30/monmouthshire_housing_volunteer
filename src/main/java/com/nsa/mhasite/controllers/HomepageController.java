@@ -1,7 +1,6 @@
 package com.nsa.mhasite.controllers;
 
 import com.nsa.mhasite.repositories.UserRoleRepository;
-import com.nsa.mhasite.services.LockedCheck;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,29 +11,21 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 @Controller
 public class HomepageController {
     static final Logger LOG = LoggerFactory.getLogger(HomepageController.class);
     private UserRoleRepository uRepo;
-    private LockedCheck check;
 
     @Autowired
-    public HomepageController(UserRoleRepository uRepo, LockedCheck check) {
+    public HomepageController(UserRoleRepository uRepo) {
         this.uRepo = uRepo;
-        this.check = check;
 }
 
     @RequestMapping("")
     public String servePortal(Model model) {
         LOG.debug("Handling empty route after login");
-
-        if (check.lockedCheck()) {
-            return "locked";
-        }
 
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         if (!(authentication instanceof AnonymousAuthenticationToken)) {
